@@ -21,7 +21,7 @@ phone.addEventListener("input", validatePhone);
 email.addEventListener("input", validateEmail);
 donation.addEventListener("change", validateDonation);
 
-//! Event listener for form submission
+//validacion al enviar el formularioj
 
 form.addEventListener("submit", (e) => {
   e.preventDefault(); // Prevenir envío estándar
@@ -34,6 +34,8 @@ form.addEventListener("submit", (e) => {
     validateEmail() &&
     validateDonation()
   ) {
+     // Si todas las funciones de validación devuelven `true`, continúa con el envío.
+
     // Recoge los datos del formulario
     const formData = new FormData(form);
 

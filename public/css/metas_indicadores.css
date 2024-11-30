@@ -91,6 +91,24 @@ body {
     padding-right: 40px;
 }
 
+/* Diseño para el párrafo */
+.styled-paragraph {
+    font-family: 'Arial', sans-serif; /* Fuente legible */
+    font-size: 1.4rem; /* Aumentar tamaño de letra */
+    line-height: 2; /* Espaciado entre líneas */
+    color: #333; /* Color del texto */
+    background-color: #f9f9f9; /* Fondo claro */
+    padding: 30px; /* Más espaciado interno */
+    border-left: 8px solid #4caf50; /* Barra decorativa más gruesa */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Sombra más notable */
+    margin-bottom: 30px; /* Más margen inferior */
+    width: 100%; /* Ocupar todo el ancho disponible */
+    max-width: 900px; /* Limitar ancho máximo */
+    margin: 0 auto; /* Centrar el párrafo horizontalmente */
+}
+
+
 .right-section {
     flex: 1;
     background-color: #f5f5f5;

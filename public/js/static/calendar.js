@@ -1,4 +1,4 @@
-fetch('http://52.205.143.76:3000/evento')
+fetch('http://52.203.85.85:3000/evento')
     .then(response => {
         if (!response.ok) {
             throw new Error('Network response was not ok');
