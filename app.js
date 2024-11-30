@@ -4,7 +4,7 @@ const mysql = require('mysql2');
 const path = require('path');
 const app = express();
 const fs = require('fs');
-const ip = 'localhost'; //aqui va la ip de tu servidor
+const ip = '52.205.143.76'; //aqui va la ip de tu servidor
 const port = 3000;
 
 // Importamos CORS
