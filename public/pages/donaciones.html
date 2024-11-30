@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="/public/css/donaciones.css">
+    <link rel="stylesheet" href="/public/css/header_footer.css">
+    <link rel="icon" href="/public/img/Logo/Logo_sinFondo.png" type="image/png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Donaciones</title>
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="/public/img/Logo/Logo_Blanco.png" alt="logo">
+        <button id="abrir" class="abrir-menu"><i class="bi bi-list"></i></button>
+        <nav class="nav" id="nav">
+            <button id="cerrar" class="cerrar-menu"><i class="bi bi-x-square-fill"></i></button>
+            <ul class="nav-list">
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/public/pages/nosotros.html">Nosotros</a></li>
+                <li><a href="/public/pages/producto.html">Producto</a></li>
+                <li><a href="/public/pages/donaciones.html">Donaciones</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <div class="content">
+            <h1>"Dona hoy, transforma mañana"</h1>
+        </div>
+
+    </div>
+
+    <div class="container-form">
+        <div class="info-form">
+            <h2>Transforma vidas con tu donación</h2>
+            <br>
+            <p>Dona Ropa, utiles escolares, alimentos,recursos tecnologicos,y contribuye a construir un futuro mejor para quienes mas lo necesitan.Cada donación, por pequeña que sea marca una gran diferancia en la lucha contra la pobreza. <br>
+                <br>
+            Únete a nuestra misión de transformar necesidades en oportunidades. <br>
+            <strong>¡Juntos podemos lograrlo!</strong>.
+            </p>
+            <!--slider,cubo de imagenes-->
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img
+                            src="https://img.freepik.com/foto-gratis/voluntarios-mascarillas-medicas-guantes-preparando-cajas-donacion-provisiones_23-2148732677.jpg?semt=ais_hybrid" />
+                        <div class="cost">Proyectos</div>
+                        <div class="overlay">
+                            <h1>Dona Alimentos</h1>
+                            <div class="ratings">
+                                <span>Tú tambien sumate</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img
+                            src="https://media.istockphoto.com/id/1372559778/es/foto/una-mujer-millennial-prepara-el-env%C3%ADo-de-algunas-prendas-en-su-nueva-tienda-online.jpg?s=612x612&w=0&k=20&c=WduN2zGR8BmpJbG3Rr6VKkW5Lnyc3vkyjlQvcni67Dg=" />
+                        <div class="cost">Proyectos</div>
+                        <div class="overlay">
+                            <h1>Dona Prendas</h1>
+                            <div class="ratings">
+                                <span>Tú tambien sumate</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img
+                            src="https://media.telemundo49.com/2021/07/donacion-utiles-escolares.jpg?quality=85&strip=all&fit=1200%2C675" />
+                        <div class="cost dark-text">Proyectos</div>
+                        <div class="overlay">
+                            <h1>Dona Utiles escolare<h1>
+                                    <div class="ratings">
+                                        <span>Tú tambien sumate</span>
+                                    </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://mercadosolucion.com/wp-content/uploads/2024/07/PC-NOTEBOOKS.jpg" />
+                        <div class="cost dark-text">Proyectos</div>
+                        <div class="overlay">
+                            <h1>Dona R.Tecnologicos</h1>
+                                <div class="ratings">
+                                    <span>Tú tambien sumate</span>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    
+
+        <section>
+            <h1 class="title">Registrate</h1>
+
+            <form id="form" method="POST" action="/submit-form">
+                <div class="input-control">
+                    <label for="nombre">Nombre*</label>
+                    <input type="text" id="nombres" name="nombres" />
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
+                </div>
+            
+                <div class="input-control">
+                    <label for="apellido">Apellido*</label>
+                    <input type="text" id="apellidos" name="apellidos" />
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
+                </div>
+
+                <div class="input-control">
+                    <label for="direccion">Dirección*</label>
+                    <input type="text" id="direccion" name="direccion" />
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
+                </div>
+            
+                <div class="input-control">
+                    <label for="telefono">Telefono*</label>
+                    <input type="text" id="telefono" name="telefono" />
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
+                </div>
+            
+                <div class="input-control">
+                    <label for="correo">Email*</label>
+                    <input type="email" placeholder="info@email.com" id="correo" name="correo" />
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
+                </div>
+            
+                <div class="input-control">
+                    <select name="seleccion_objetos" id="seleccion_objetos">
+                        <option value="" disabled selected>¿Qué deseas donar?</option>
+                        <option value="Alimentos">Alimentos</option>
+                        <option value="Ropa">Ropa</option>
+                        <option value="Electrodomesticos">Recursos Tecnologicos</option>
+                        <option value="Utiles Escolares">Útiles Escolares</option>
+                        <option value="otros">Otros</option>
+                    </select>
+                    <small>Error message</small>
+                </div>
+            
+                <div>
+                    <textarea id="comentario" name="comentario" rows="4" cols="45" placeholder="Escribe tus comentarios aquí"></textarea>
+                </div>
+            
+                <button type="submit">Enviar </button>
+            </form>
+            
+            <div class="message hidden">
+                <h1>Gracias por tu donación, nos pondremos en contacto contigo pronto!🎉</h1>
+            </div>
+
+        </section>
+    </div>
+    <br>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="/public/img/Logo/Logo_Blanco.png" alt="BMS Logo" width="170">
+            </div>
+            <div class="social-media">
+                <a href="https://www.facebook.com/tecnologiaVG/?locale=es_LA"><img
+                        src="/public/img/Iconos/Pagina_Principal/Contacto/facebook.png" alt="Facebook" width="30"></a>
+                <a href="https://www.youtube.com/@vallegrande_/featured"><img
+                        src="/public/img/Iconos/Pagina_Principal/Contacto/youtube.png" alt="YouTube" width="30"></a>
+            </div>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <img src="/public/img/Iconos/Pagina_Principal/Contacto/telefono.png" alt="Teléfono" width="20">
+                    <p>(01) 581-2261</p>
+                </div>
+                <div class="contact-item">
+                    <img src="/public/img/Iconos/Pagina_Principal/Contacto/correo_electronico.png" alt="Email"
+                        width="20">
+                    <p><a href="mailto:informes@vallegrande.edu.pe">informes@vallegrande.edu.pe</a></p>
+                </div>
+                <div class="contact-item">
+                    <img src="/public/img/Iconos/Pagina_Principal/Contacto/correo_electronico.png" alt="Email"
+                        width="20">
+                    <p><a
+                            href="mailto:briseyda.arbizu.valladolid@vallegrande.edu.pe">briseyda.arbizu.valladolid@vallegrande.edu.pe</a>
+                    </p>
+                </div>
+                <div class="contact-item">
+                    <img src="/public/img/Iconos/Pagina_Principal/Contacto/correo_electronico.png" alt="Email"
+                        width="20">
+                    <p><a
+                            href="mailto:marilyn.vilcapuma.trujillo@vallegrande.edu.pe">marilyn.vilcapuma.trujillo@vallegrande.edu.pe</a>
+                    </p>
+                </div>
+                <div class="contact-item">
+                    <img src="/public/img/Iconos/Pagina_Principal/Contacto/correo_electronico.png" alt="Email"
+                        width="20">
+                    <p><a
+                            href="mailto:samuel.justiniani.lancho@vallegrande.edu.pe">samuel.justiniani.lancho@vallegrande.edu.pe</a>
+                    </p>
+                </div>
+                <div class="contact-item">
+                    <img src="/public/img/Iconos/Pagina_Principal/Contacto/sitio_web.png" alt="Website" width="20">
+                    <p><a href="https://www.vallegrande.edu.pe" target="_blank">www.vallegrande.edu.pe</a></p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>©2024 BMS - Todos los derechos reservados</p>
+            </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="/public/js/dinamic/Dona_CubeEffect.js"></script>
+    <script src="/public/js/static/donaciones.js"></script>
+    <script src="/public/js/dinamic/menu.js"></script>
+    
+</body>
+
+</html>

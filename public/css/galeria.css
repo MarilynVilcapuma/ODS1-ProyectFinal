@@ -1,0 +1,120 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #1b1b1b;
+}
+
+#gallery{
+   width: 900px;
+   display: flex;
+   overflow-x: scroll;
+}
+
+#gallery div{
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap:20px;
+    padding:10px;
+    flex: none;
+}
+
+#gallery div img{
+    width: 100%;
+    filter: grayscale(100%);
+    transition: all 0.5s;
+}
+
+#gallery-wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:10% auto;
+    transform: translateX(20px);
+}
+
+#gallery::-webkit-scrollbar{
+    display: none;
+}
+
+#backBtn, #nextBtn{
+    width: 50px;
+    cursor:pointer;
+    margin:40px;
+}
+
+#gallery div img:hover{
+    filter: grayscale(0);
+    transform: scale(1.1);
+    
+}
+
+@media screen and (max-width: 600px) {
+    .projects {
+        padding: 20px; /* Reduce el padding */
+    }
+
+    .icon-subtitle h1 {
+        font-size: 2rem; /* Ajusta el tamaño del título */
+    }
+
+    #gallery {
+        width: 100%; /* Asegura que la galería ocupe todo el ancho disponible */
+        overflow-x: auto; /* Habilita el desplazamiento horizontal */
+    }
+
+    #gallery div {
+        grid-template-columns: auto; /* Una sola columna */
+        padding: 5px;
+    }
+
+    #gallery div img {
+        width: 100%; /* Las imágenes deben ser responsivas */
+        filter: grayscale(100%);
+    }
+
+    #backBtn, #nextBtn {
+        width: 40px; /* Reduce el tamaño de los botones */
+        margin: 20px; /* Ajusta el margen de los botones */
+    }
+
+    #gallery-wrap {
+        flex-direction: column; /* Asegura que los elementos estén en columna */
+        margin: 20px auto; /* Reduce el margen */
+    }
+}
+
+/* Ajuste para pantallas medianas (tabletas) */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    .icon-subtitle h1 {
+        font-size: 2.2rem; /* Ajusta el tamaño del título */
+    }
+
+    #gallery {
+        width: 90%; /* Reduce el ancho de la galería */
+    }
+
+    #gallery div {
+        grid-template-columns: auto auto; /* Dos columnas */
+        grid-gap: 15px;
+    }
+
+    #gallery div img {
+        width: 100%; /* Las imágenes deben ajustarse */
+    }
+}
+
+/* Ajustes para pantallas grandes */
+@media screen and (min-width: 1025px) {
+    #gallery {
+        width: 80%; /* Reduce el tamaño de la galería */
+    }
+
+    #gallery div {
+        grid-template-columns: auto auto auto; /* Tres columnas */
+    }
+}

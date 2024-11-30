@@ -1,0 +1,242 @@
+
+.subtitle {
+    background-color: #E02B40;
+    padding: 20px;
+}
+.subtitle h2 {
+    text-align: center;
+    color: white;
+}
+.text{
+    text-align: justify;
+   
+}
+.individual-actions {
+    text-align: left;
+    padding: 50px 20px;
+    background-color: #EDEBE0;
+}
+
+.individual-boxes {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 20px; /* Espacio entre los cuadros */
+    padding: 20px;
+}
+.box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f8f8;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: auto;
+    text-align: justify;
+    width: 900px;
+}
+
+.box h3 {
+    margin-top: 0;
+    font-size: 20px;
+    color: #000000; /* Color de título */
+}
+.box p {
+    margin-bottom: 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.img-individual {
+    width: 100px; /* Puedes ajustar el tamaño según la imagen */
+    height: auto;
+    margin-right: 20px; /* Espacio entre el texto y la imagen */
+    padding-right: 100px;
+    padding-left: 100px;
+}
+/* Estilos responsivos */
+
+/* Para pantallas de tabletas (768px - 1024px) */
+@media (max-width: 1024px) {
+    .box {
+        flex-direction: column; /* Apila la imagen y el texto */
+        width: 100%; /* Se adapta al ancho del contenedor */
+        text-align: center;
+    }
+
+    .img-individual {
+        margin: 0 auto 15px; /* Centra la imagen y agrega espacio inferior */
+        padding: 0; /* Quita los paddings adicionales */
+    }
+}
+
+/* Para pantallas de celulares grandes (576px - 767px) */
+@media (max-width: 767px) {
+    .individual-boxes {
+        gap: 15px; /* Reduce el espacio entre cuadros */
+    }
+
+    .box {
+        padding: 20px;
+    }
+
+    .box h3 {
+        font-size: 18px; /* Ajusta el tamaño del título */
+    }
+
+    .box p {
+        font-size: 14px; /* Ajusta el tamaño del texto */
+    }
+
+    .img-individual {
+        width: 80px; /* Reduce el tamaño de la imagen */
+        margin-bottom: 10px;
+    }
+}
+
+/* Para pantallas de celulares pequeños (hasta 575px) */
+@media (max-width: 575px) {
+    .box {
+        flex-direction: column; /* Apila los elementos */
+        padding: 15px;
+    }
+
+    .box h3 {
+        font-size: 16px; /* Títulos más pequeños */
+    }
+
+    .box p {
+        font-size: 12px; /* Texto más pequeño */
+    }
+
+    .img-individual {
+        width: 70px; /* Imagen más pequeña */
+        margin-bottom: 10px;
+    }
+}
+.img-collective {
+    width: 100px;
+    height: auto;
+    margin-right: 20px; /* Espacio entre la imagen y el texto */
+    padding-right: 100px;
+    padding-left: 100px;
+}
+
+
+/* Sección de Ideas Colectivas */
+.collective-actions {
+    text-align: left;
+    padding: 50px 20px;
+    background-color: #FFC4BD;
+}
+
+.collective-actions h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.collective-boxes {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 20px; /* Espacio entre los cuadros */
+    padding: 20px;
+}
+
+.collective-boxes .box {
+    background-color: #ffe0b2;
+    
+}
+
+.idea-boxes .box h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.idea-boxes .box p {
+    font-size: 16px;
+}
+.letter {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+/* Estilos responsivos */
+
+/* Para tabletas (768px - 1024px) */
+@media (max-width: 1024px) {
+    .collective-boxes {
+        gap: 15px; /* Reduce el espacio entre cuadros */
+    }
+
+    .collective-boxes .box {
+        flex-direction: column; /* Apila los elementos */
+        width: 100%; /* Se adapta al contenedor */
+        padding: 20px;
+        text-align: center;
+    }
+
+    .collective-boxes .box h3 {
+        font-size: 20px; /* Ajusta tamaño de títulos */
+    }
+
+    .collective-boxes .box p {
+        font-size: 14px; /* Reduce tamaño del texto */
+    }
+
+    .img-collective {
+        width: 80px; /* Imagen más pequeña */
+        padding: 0; /* Quita paddings laterales */
+        margin: 0 auto 10px; /* Centra y añade margen inferior */
+    }
+}
+
+/* Para celulares grandes (576px - 767px) */
+@media (max-width: 767px) {
+    .collective-boxes {
+        flex-direction: column; /* Organiza en columnas */
+        gap: 10px; /* Menor espacio entre cuadros */
+    }
+
+    .collective-boxes .box {
+        padding: 15px; /* Reduce el padding */
+    }
+
+    .collective-boxes .box h3 {
+        font-size: 18px; /* Títulos más pequeños */
+    }
+
+    .collective-boxes .box p {
+        font-size: 13px; /* Texto más pequeño */
+    }
+
+    .img-collective {
+        width: 70px; /* Imagen más pequeña */
+    }
+}
+
+/* Para celulares pequeños (hasta 575px) */
+@media (max-width: 575px) {
+    .collective-boxes .box {
+        flex-direction: column; /* Apila todos los elementos */
+        text-align: center;
+        padding: 10px;
+    }
+
+    .collective-boxes .box h3 {
+        font-size: 16px;
+    }
+
+    .collective-boxes .box p {
+        font-size: 12px;
+    }
+
+    .img-collective {
+        width: 60px; /* Imagen aún más pequeña */
+    }
+}
+
+

@@ -1,0 +1,427 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* Elimina los márgenes y paddings predeterminados del body */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+     
+
+}
+
+/* Estilo general del body */
+body {
+    overflow-x: hidden; /* Evita desplazamiento horizontal innecesario */
+    font-family: "Poppins", serif;
+}
+
+        /* Estilo general del header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ac1414;
+            color: white;
+            padding: 0.5rem 2rem; /* Reduce el padding superior e inferior */
+            margin: 0;
+            width: 100vw; /* Asegura que cubra todo el ancho de la página */
+            position: fixed; /* Mantiene el header en la parte superior */
+            top: 0; /* Fija el encabezado en la parte superior */
+            z-index: 1000; /* Asegura que el header esté por encima del contenido */
+            transition: padding 0.3s ease; /* Añadir transición suave para el padding */
+            height: auto; /* Asegura que la altura se ajuste automáticamente */
+        }
+
+        /* Estilo del logo */
+        .logo {
+            max-width: 5rem; /* Aumentar el tamaño original del logo */
+            height: auto;
+            transition: transform 0.3s ease, max-width 0.3s ease; /* Añadir transición para max-width */
+        }
+
+        /* Estilo para el logo cuando se hace pequeño */
+        .logo.shrink {
+            transform: scale(0.9); /* Reduce el tamaño a la mitad */
+            max-width: 3rem; /* Ajustar el max-width para hacer que el cambio sea más notable */
+        }
+
+        /* Estilo para el header cuando se hace scroll */
+        header.shrink {
+            padding: 0.5rem 2rem; /* Reduce el padding del header */
+        }
+
+        /* Estilo del menú de navegación */
+        .nav-list {
+            list-style-type: none;
+            display: flex;
+            gap: 1.5rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Estilo para los enlaces del menú */
+        .nav-list li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 20px;
+            padding: 0.5rem;
+        }
+
+        .nav-list li a:hover {
+            color: #ffcccb;
+        }
+
+        /* Estilo del botón hamburguesa y botón cerrar */
+        .abrir-menu, .cerrar-menu {
+            display: none;
+        }
+
+        /* Estilo del main para evitar que el contenido se superponga con el header */
+        main {
+            margin-top: calc(70px); /* Ajuste el margen superior para evitar superposición */
+            padding: 20px;
+        }
+
+        /* Media Query para pantallas pequeñas */
+        @media (max-width: 768px) {
+            /* Ajuste del header */
+            header {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                padding: 1rem;
+                width: 100vw; /* Asegura que cubra el ancho completo en móviles */
+            }
+
+            /* Ocultar el menú de navegación por defecto en móviles */
+            .nav {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: rgba(172, 20, 20, 0.9); /* Color rojo transparente */
+                flex-direction: column;
+                align-items: center;
+                z-index: 999; /* Asegura que esté por encima de otros elementos */
+                transition: opacity 0.3s ease; /* Transición suave */
+            }
+
+            /* Mostrar el menú cuando tiene la clase visible */
+            .nav.visible {
+                display: flex;
+                position: fixed;
+                top: 0; /* Coloca el menú desde la parte superior */
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: rgba(0, 0, 0, 0.9); /* Fondo oscuro cuando el menú es visible */
+                z-index: 1000;
+                justify-content: center;
+            }
+
+            /* Alinear los ítems del menú verticalmente en móviles */
+            .nav-list {
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+            }
+
+            .nav-list li {
+                width: 100%;
+            }
+
+            .nav-list li a {
+                padding: 1.5rem;
+                width: 100%;
+                display: block;
+                color: #fff;
+                border-bottom: 1px solid #fff;
+            }
+
+            /* Mostrar el botón de menú hamburguesa */
+            .abrir-menu {
+                display: block;
+                font-size: 2rem;
+                background: none;
+                border: none;
+                color: white;
+                cursor: pointer;
+            }
+
+            /* Estilo para el botón de cerrar menú */
+            .cerrar-menu {
+                display: block;
+                font-size: 2rem;
+                background: none;
+                border: none;
+                color: white;
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+                cursor: pointer;
+            }
+        }
+
+/* Contenedor principal de hero-content */
+.hero-content {
+    position: absolute; /* Posición en relación al contenedor del carrusel */
+    top: 50%; /* Centrado verticalmente */
+    left: 50%; /* Centrado horizontalmente */
+    transform: translate(-50%, -50%); /* Ajuste para centrar */
+    color: white; /* Texto en blanco */
+    text-align: center; /* Centra el texto */
+    z-index: 10; /* Coloca el contenido encima del carrusel */
+}
+
+/* Título */
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+/* Párrafos */
+.hero-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+/* Contenedor principal para centrar el contenido del botón*/
+.button-one {
+    display: flex;                   /* Alinea los botones en fila */
+    justify-content: center;         /* Centra los botones horizontalmente */
+    position: absolute;              /* Permite posicionar los botones en la parte inferior */
+    transform: translate(-50%, -50%);
+    bottom: 20px;                    /* Coloca los botones a 20px del fondo de la sección */
+    left: 50%;                       /* Mueve el contenedor al centro horizontalmente */
+    width: 100%;                     /* Asegura que el contenedor ocupe todo el ancho */
+    padding-bottom: 50px;            /* Espaciado adicional */
+}
+#history-button {
+    background: linear-gradient(45deg, #ff7ba9, #ff4d6d); /* Degradado de colores */
+    color: white;                       /* Color del texto */
+    border: none;                       /* Sin bordes */
+    padding: 12px 30px;                 /* Tamaño del botón */
+    font-size: 18px;                    /* Tamaño de fuente más grande */
+    font-weight: bold;                  /* Negrita */
+    text-transform: uppercase;          /* Texto en mayúsculas */
+    cursor: pointer;                    /* Manito al pasar */
+    border-radius: 30px;                /* Bordes redondeados */
+    transition: all 0.4s ease;          /* Transición suave */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra elegante */
+    position: relative;                 /* Para efectos adicionales */
+    overflow: hidden;                   /* Esconde contenido que salga del botón */
+}
+#history-button:hover {
+    background: linear-gradient(45deg, #ff4d6d, #ff7ba9); /* Cambia la dirección del degradado */
+    transform: scale(1.05);            /* Agranda ligeramente el botón */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Aumenta la sombra */
+}
+#history-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 300%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: skewX(-45deg);
+    transition: all 0.4s ease;
+    z-index: 1;                        /* Asegura que esté detrás del texto */
+}
+#history-button:hover::before {
+    left: 100%;
+}
+#history-button{
+    z-index: 2;
+}
+
+/* Ajustes Responsive para pantallas medianas */
+@media screen and (max-width: 850px) {
+    .hero-content {
+        top: 60%; /* Ajusta la posición vertical */
+        left: 50%;
+        transform: translate(-50%, -60%);
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+}
+
+/* Ajustes Responsive para pantallas pequeñas */
+@media screen and (max-width: 480px) {
+    .hero-content {
+        top: 50%; /* Ajusta la posición vertical */
+        left: 50%;
+        transform: translate(-50%, -65%);
+    }
+
+    .hero-content h1 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+
+    .hero-content p {
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+    }
+}
+
+.carousel-background{
+    position: relative;
+    width: 100%;
+    height: 789px;
+    overflow: hidden;
+    z-index: -1;
+}
+.carousel-image{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+.carousel-image.active {
+    opacity: 1;
+}
+
+.carousel-image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro semi-transparente */
+    z-index: 1; /* Asegura que esté encima de la imagen */
+}
+
+
+.contacto {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.contacto h1 {
+    text-align: center;
+    padding: 10px;
+    font-size: 2.5rem;
+}
+
+.footer {
+    background-color: #AC1414;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+}
+
+.footer-logo img {
+    margin-right: 10px;
+}
+
+.footer-logo h4 {
+    font-size: 20px;
+}
+
+.social-media a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.contact-info p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 12px;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        padding: 0 15px; /* Añadir espacio en los laterales */
+        max-width: 100%; /* Asegura que no sobrepase el ancho de la pantalla */
+        margin: 0 auto; /* Centra el contenido */
+        box-sizing: border-box; /* Incluye padding en el ancho */
+    }
+
+    .footer-logo {
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .contact-info {
+        width: 100%;
+        padding: 0 15px; /* Añadir espacio en los laterales de los correos */
+        margin: 0 auto;
+    }
+
+    .contact-item {
+        margin: 10px 0; /* Espacio entre los correos */
+        text-align: center;
+        padding: 0 15px; /* Añadir espacio a los lados de cada correo */
+        box-sizing: border-box; /* Incluye el padding dentro del ancho */
+    }
+
+    .contact-item p {
+        margin: 0;
+        padding: 0 10px; /* Añadir espacio dentro del texto de cada correo */
+        text-align: center;
+        word-wrap: break-word; /* Asegura que las palabras largas se ajusten */
+        overflow-wrap: break-word; /* Evita que el texto se desborde */
+        word-break: break-word; /* Rompe las palabras largas */
+    }
+}
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+}
+
+.contact-item img {
+    margin-right: 10px;
+}
+
+.contact-item p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.contact-item a {
+    color: white;
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}

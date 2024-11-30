@@ -1,0 +1,97 @@
+#slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 800px;
+    height: 500px;
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+}
+
+#slider img.active {
+    transform: scale(1.05); /* Aumenta ligeramente la imagen central */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3); /* Añade una sombra */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.slide-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+
+.slide {
+    width: 300px;
+    height: 440px;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    opacity: 0.5;
+    position: absolute;
+    display: none; /* Ocultar todas las imágenes inicialmente */
+}
+
+.slide.prev {
+    transform: translateX(-150px) scale(0.8);
+    display: block;
+}
+
+.slide.active {
+    transform: translateX(0) scale(1.1);
+    opacity: 1;
+    z-index: 10;
+    display: block;
+}
+
+.slide.next {
+    transform: translateX(150px) scale(0.8);
+    display: block;
+}
+
+/* Estilo para las flechas */
+.controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 20;
+}
+
+.controls .arrow-left, .controls .arrow-right {
+    font-size: 30px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background-color 0.2s;
+}
+
+.controls .arrow-left:hover, .controls .arrow-right:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Estilo para los puntos */
+#dots {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background-color: rgba(255, 255, 255, 0.5); /* Fondo transparente inicial */
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.4), rgba(200, 200, 200, 0.4)); /* Degradado sutil */
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #e84343; /* Rojo cuando el punto está activo */
+    transform: scale(1.2); /* Agranda el punto cuando está activo */
+}

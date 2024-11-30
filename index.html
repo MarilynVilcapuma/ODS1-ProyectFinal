@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMS</title>
+    <!--Link swipers-->
+    <link rel="icon" href="public/img/Logo/Logo_sinFondo.png" type="image/png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="/public/css/carouProyec.css">
+    <link rel="stylesheet" href="/public/css/carouOrn.css">
+    <link rel="stylesheet" href="/public/css/carrusel.css">
+    <link rel="stylesheet" href="/public/css/galeria.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/public/css/styles.css">
+    <link rel="stylesheet" href="/public/css/header_footer.css">
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="/public/img/Logo/Logo_Blanco.png" alt="logo">
+        <button id="abrir" class="abrir-menu"><i class="bi bi-list"></i></button>
+        <nav class="nav" id="nav">
+            <button id="cerrar" class="cerrar-menu"><i class="bi bi-x-square-fill"></i></button>
+            <ul class="nav-list">
+                <li><a href="#index.html">Inicio</a></li>
+                <li><a href="/public/pages/nosotros.html">Nosotros</a></li>
+                <li><a href="/public/pages/producto.html">Producto</a></li>
+                <li><a href="#donation">Donaciones</a></li>
+                <li><a href="#explora-ods">Explora los ODS</a></li>
+            </ul>
+        </nav>
+
+        
+    </header>
+
+
+    <section class="hero">
+
+        <div class="carousel-background">
+            <div class="carousel-image" style="background-image: url(/public/img/Donaciones/FelizDonar.jpg);"></div>
+            <div class="carousel-image" style="background-image: url(/public/img/Pagina_Inicio/pobreza.png);"></div>
+            <div class="carousel-image" style="background-image: url(/public/img/Pagina_Inicio/valle\ grande.png);">
+            </div>
+        </div>
+        <div class="hero-content">
+            <h1>Transforma Vidas <br> con Tú Donación</h1>
+            <p>Este sitio web permite contribuir al bienestar de personas vulnerables mediante donaciones, mejorando la
+                calidad de vida y combatiendo la pobreza contribuyendo al primero objetivo de desarrollo sostenible. </p>
+            <p><em><span id="typingText"></span></em></p>
+            <div class="contenedor-fechasimportantes">
+                <div id="eventodia" class="evento-box">Cargando evento del día...</div>
+            </div>
+        </div>
+        <script src="./public/js/static/carousel.js"></script>
+        <div class="button-one">
+            <button id="history-button">Ver Historia</button>
+        </div>
+    </section>
+    <section class="primary-section">
+        <div class="ods-subtitle">
+            <h1>17 Objetivos para Transformar Nuestro Mundo</h1>
+        </div>
+        <div class="ods-text">
+            <p>Los Objetivos de Desarrollo Sostenible (ODS) son 17 metas globales que buscan transformar nuestro mundo.
+                Adoptados en 2015 por la ONU, estos objetivos abordan los mayores desafíos de nuestra era, desde
+                erradicar la pobreza hasta proteger el planeta.
+                ¡Únete al cambio hacia un futuro más justo, equitativo y sostenible!
+        </div>
+        <div class="image-container">
+            <img class="ods-image" src="./public/img/Pagina_Inicio/inicioODS.png" alt="17 objetivos" width="340">
+        </div>
+    </section>
+    <section class="second-content">
+        <div class="banner-ods">
+            <img src="./public/img/Encabezados/Encabezado ODS.png" alt="encabezado ods" class="ods-banner">
+        </div>
+    </section>
+    <section class="icons-section">
+        <div class="icon-card"
+            data-info="El primer ODS se relaciona con todos los objetivos, ya que erradicar la pobreza mejora la salud, la educación, la igualdad de género y el acceso a recursos básicos, lo que impulsa el desarrollo sostenible. Además, reduce las desigualdades y fortalece la paz y las alianzas globales, creando un impacto positivo en todos los ámbitos de la sociedad.">
+            <div class="icon-front">
+                <img src="/public/img/Iconos/ODS/01_Icono.png" alt="Icon 1" width="216">
+            </div>
+            <div class="icon-back">
+                <p><b>ERRADICAR LA POBREZA</b> en todas sus formas para que todas las personas tengan lo necesario para
+                    vivir
+                    dignamente</p>
+            </div>
+        </div>
+        <div class="icon-card"
+            data-info="La pobreza y el hambre van de la mano. Al eliminar la pobreza, también nos acercamos a un mundo sin hambre. Tener acceso a alimentos nutritivos es clave para una vida digna y saludable.">
+            <div class="icon-front">
+                <img src="./public/img/Iconos/ODS/02_Icono.png" alt="Icon 2" width="216">
+            </div>
+            <div class="icon-back">
+                <p><b>ERRADICAR EL HAMBRE</b> y asegurar que todas las personas tengan acceso a alimentos suficientes y
+                    nutritivos.</p>
+            </div>
+        </div>
+        <div class="icon-card"
+            data-info="Relacion: Una vida sin pobreza es una vida con acceso a servicios de salud de calidad. Reducir la pobreza significa mejorar el acceso a la atención médica y asegurar el bienestar para todos.">
+            <div class="icon-front">
+                <img src="./public/img/Iconos/ODS/03_Icono.png" alt="Icon 3" width="216">
+            </div>
+            <div class="icon-back">
+                <p><b>ASEGURAR UNA BUENA SALUD Y BIENESTAR</b> para todos, con acceso a servicios médicos de calidad.
+                </p>
+            </div>
+        </div>
+        <div class="icon-card"
+            data-info="Relacion: La educación es clave para salir de la pobreza, ya que el acceso a una educación de calidad transforma vidas y comunidades.">
+            <div class="icon-front">
+                <img src="./public/img/Iconos/ODS/04_Icono.png" alt="Icon 4" width="216">
+            </div>
+            <div class="icon-back">
+                <p><b>EDUCACIÓN DE CALIDAD</b> Asegurar inclusión, equidad y aprendizaje continuo para todos.</p>
+            </div>
+        </div>
+        <div class="icon-card"
+            data-info="Relación: La discriminación de género perpetúa la pobreza. Invertir en igualdad beneficia a la economía y promueve un crecimiento inclusivo.">
+            <div class="icon-front">
+                <img src="./public/img/Iconos/ODS/05_Icono.png" alt="Icon 5" width="216">
+            </div>
+            <div class="icon-back">
+                <p><b>IGUALDAD DE GÉNERO</b> Promover la igualdad y eliminar la violencia para empoderar a mujeres y
+                    hombres.
+                </p>
+            </div>
+        </div>
+        <div class="icon-card"
+            data-info="Relación: Sin acceso a agua limpia y saneamiento, las personas no pueden prosperar. Mejorar estas infraestructuras es fundamental para la salud y el desarrollo económico.">
+            <div class="icon-front">
+                <img src="./public/img/Iconos/ODS/06_Icono.png" alt="Icon 6" width="216">
+            </div>
+            <div class="icon-back">
+                <p><b>AGUA LIMPIA Y SANEAMIENTO</b> Garantizar acceso y gestión sostenible del agua y saneamiento. </p>
+            </div>
+        </div>
+        <div class="icon-card"
+            data-info="Relación: La energía limpia impulsa el desarrollo, mejora la calidad de vida y fomenta el crecimiento económico sostenible.">
+            <div class="icon-front">
+                <img src="./public/img/Iconos/ODS/07_Icono.png" alt="Icon 7" width="216">
+            </div>
+            <div class="icon-back">
+                <p><b>ENERGÍA ASEQUIBLE Y NO CONTAMINANTE</b> Garantizar energía segura y sostenible para todos.</p>
+            </div>
+        </div>
+        <div class="icon-card"
+            data-info="Relacion: El empleo de calidad combate la pobreza y mejora la seguridad de vida.">
+            <div class="icon-front">
+                <img src="./public/img/Iconos/ODS/08_Icono.png" alt="Icon 8" width="216">
+            </div>
+            <div class="icon-back">
+                <p><b>TRABAJO DECENTE Y CRECIMIENTO ECONÓMICO</b> Crecimiento inclusivo con empleo
+                    pleno y decente.</p>
+            </div>
+        </div>
+        <div class="icon-card"
+            data-info="Relacion: Inversiones en infraestructura y tecnología impulsan la economía y crean oportunidades, reduciendo la pobreza.">
+            <div class="icon-front">
+                <img src="./public/img/Iconos/ODS/09_Icono.png" alt="Icon 9" width="216">
+            </div>
+            <div class="icon-back">
+                <p><b>INDUSTRIA, INNOVACIÓN E INFRAESTRUCTURA</b> Son clave para el crecimiento
+                    económico.</p>
+            </div>
+        </div>
+        <div class="icon-card"
+            data-info="Relacion: Disminuir las desigualdades económicas y sociales es crucial para erradicar la pobreza, asegurando que todos tengan una oportunidad justa a través de una distribución equitativa de recursos.">
+            <div class="icon-front">
+                <img src="./public/img/Iconos/ODS/10_Icono.png" alt="Icon 10" width="216">
+            </div>
+            <div class="icon-back">
+                <p><b>REDUCCIÓN DE LAS DESIGUALDADES</b> Reducir desigualdades y promover la inclusión social y
+                    económica.</p>
+            </div>
+        </div>
+        <div class="icon-card"
+            data-info="Relación:Es muy cercana, ya que las condiciones en las ciudades afectan directamente la pobreza y el bienestar de las personas.">
+            <div class="icon-front">
+                <img src="./public/img/Iconos/ODS/11_Icono.png" alt="Icon 11" width="216">
+            </div>
+            <div class="icon-back">
+                <p><b>CIUDADES Y COMUNIDADES SOSTENIBLES</b> Asegurar un desarrollo urbano sostenible</p>
+            </div>
+        </div>
+        <div class="icon-card"
+            data-info="Relación: Ciudades bien planificadas mejoran la calidad de vida y reducen la pobreza, promoviendo el bienestar.">
+            <div class="icon-front">
+                <img src="/public/img/Iconos/ODS/12_Icono.png" alt="Icon 12" width="216">
+            </div>
+            <div class="icon-back">
+                <p><b>PRODUCCIÓN Y CONSUMO RESPONSABLE</b> reduciendo el
+                    desperdicio.</p>
+            </div>
+        </div>
+        <div class="icon-card"
+            data-info="Relacion:El cambio climático afecta más a los pobres. Combatir el cambio climático no solo protege el planeta, sino que también protege a las comunidades vulnerables que son más propensas a sufrir sus efectos.">
+            <div class="icon-front">
+                <img src="./public/img/Iconos/ODS/13_Icono.png" alt="Icon 13" width="216">
+            </div>
+            <div class="icon-back">
+                <p><b>ACCIÓN POR EL CLIMA</b> Actuar urgentemente contra el cambio climático y la adaptación a
+                    desastres.</p>
+            </div>
+        </div>
+        <div class="icon-card"
+            data-info="Relación:Las comunidades costeras que dependen del mar para su sustento son vulnerables a la pobreza. Proteger nuestros océanos asegura medios de vida y seguridad alimentaria para muchas personas.">
+            <div class="icon-front">
+                <img src="./public/img/Iconos/ODS/14_Icono.png" alt="Icon 14" width="216">
+            </div>
+            <div class="icon-back">
+                <p><b>VIDA SUBMARINA</b> Conservar y utilizar sosteniblemente los océanos y recursos marinos,
+                    protegiendo los
+                    ecosistemas.</p>
+            </div>
+        </div>
+        <div class="icon-card"
+            data-info="Relación: Erradicar la pobreza fomenta un manejo responsable de los recursos, ayudando a las comunidades a adoptar prácticas sostenibles y preservar bosques y biodiversidad.">
+            <div class="icon-front">
+                <img src="./public/img/Iconos/ODS/15_Icono.png" alt="Icon 15" width="216">
+            </div>
+            <div class="icon-back">
+                <p><b>VIDA DE ECOSISTEMAS TERRESTRES</b> Proteger, restaurar ecosistemas y gestionar los bosques.</p>
+            </div>
+        </div>
+        <div class="icon-card"
+            data-info="Relación: La justicia son esenciales para combatir la pobreza. Fortalecer las instituciones y garantizar la justicia asegura que las políticas para erradicar la pobreza sean efectivas.">
+            <div class="icon-front">
+                <img src="./public/img/Iconos/ODS/16_Icono.png" alt="Icon 16" width="216">
+            </div>
+            <div class="icon-back">
+                <p><b>PAZ, JUSTICIA E INSTITUCIONES SÓLIDAS</b> Promover sociedades pacíficas y garantizar el acceso a
+                    la
+                    justicia.</p>
+            </div>
+        </div>
+        <div class="icon-card"
+            data-info="Relacion : La cooperación global es clave. Alianzas entre países, organizaciones y sectores son necesarias para implementar soluciones integrales y efectivas contra la pobreza.">
+            <div class="icon-front">
+                <img src="./public/img/Iconos/ODS/17_Icono.png" alt="Icon 17" width="216">
+            </div>
+            <div class="icon-back">
+                <p><b>ALIANZAS PARA LOGRAR LOS OBJETIVOS</b> la cooperación entre gobiernos ysociedad para el
+                    desarrollo. </p>
+            </div>
+        </div>
+        <div class="ods-card">
+            <img src="./public/img/Iconos/ODS/00_IconoODS.png" alt="Icon ods" width="216">
+        </div>
+        <!-- Ventana Emergente -->
+        <div id="sidebar" class="sidebar">
+            <button id="close-sidebar" class="close-button">Cerrar</button>
+            <div id="content">
+                <h1>Historia</h1>
+                <p>En 2015, la ONU aprobó la Agenda 2030 sobre el Desarrollo Sostenible, una oportunidad para que los
+                    países y sus sociedades emprendieran un nuevo camino con el que mejorar la vida de todas las
+                    personas, sin dejar a nadie atrás. La Agenda cuenta con 17 Objetivos de Desarrollo Sostenible, que
+                    establecen que la erradicación de la pobreza debe ir de la mano de estrategias que fomenten el
+                    crecimiento económico y aborden una serie de necesidades sociales como la educación, la sanidad, la
+                    protección social y las perspectivas de empleo, al tiempo que se combate el cambio climático y se
+                    protege el medio ambiente</p>
+            </div>
+        </div>
+    </section>
+    <!-- Modal -->
+    <div class="modal" id="infoModal">
+        <div class="modal-content">
+            <span class="close-modalButton">&times;</span>
+            <p id="modalText"></p>
+        </div>
+    </div>
+    <section class="subtitle">
+        <h1>¿Por qué son importantes?</h1>
+    </section>
+    <section class="info-section">
+        <p class="concepto">Los ODS son la respuesta a los desafíos más urgentes de nuestro tiempo, ofreciendo un plan claro para un
+            futuro donde todos prosperemos. Basados en la convicción de que paz, prosperidad y cuidado del planeta están
+            profundamente conectados, nos invitan a unir fuerzas para construir un mundo mejor, tanto para nosotros como
+            para las generaciones futuras.</p>
+        <div class="video-container">
+            <iframe class="video" width="1200" height="600" src="https://www.youtube.com/embed/MCKH5xk8X-g?si=EkilXdOmT0p2PuC1"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </section>
+    <section class="subtitle">
+        <h1>Explora los ODS</h1>
+    </section>
+    <section class="explore-ods" id="explora-ods">
+        <div class="container-ods">
+            <div class="icon-position">
+                <a href="./public/pages/metas_indicadores.html">
+                    <img src="./public/img/Iconos/Explora_los_ODS/meta.png" alt="Goals and indicators"
+                        width="129">
+                    <p>Metas e Indicadores</p>
+                </a>
+            </div>
+            <div class="icon-position">
+                <a href="./public/pages/acciones.html">
+                    <img src="./public/img/Iconos/Explora_los_ODS/accion.png" alt="accions" width="129">
+                    <p>Acciones</p>
+                </a>
+            </div>
+            <div class="icon-position">
+                <a href="./public/pages/retos_proyectos.html">
+                    <img src="./public/img/Iconos/Explora_los_ODS/reto.png" alt="challenges" width="129">
+                    <p>Retos y Desafíos</p>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="subtitle">
+        <h1>Proyectos exitosos</h1>
+    </section>
+    <section class="projects">
+
+        <div id="gallery-wrap">
+            <div id="gallery">
+                <div>
+                    <span><img src="./public/img/Retos_y_proyecto/bambi.png" alt=""></span>
+                    <span><img src="./public/img/Retos_y_proyecto/aldeasinf.png"></span>
+                    <span><img src="./public/img/Retos_y_proyecto/heifer.png" alt=""></span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="subtitle">
+        <h1>Organizaciones</h1>
+    </section>
+    <!--Carrusel organization-->
+    <section class="organization">
+        <div class="title-container">
+            <img src="public/img/Iconos/Organizaciones/Techo_Peru.png" alt="Logo" class="logoorg">
+            <h1>Techo Peru</h1>
+        </div>
+        <p class="concept-text">
+            TECHO Perú combate la pobreza extrema construyendo viviendas y promoviendo comunidades sostenibles. Únete como
+            voluntario y ayuda a transformar vidas mientras desarrollas habilidades para el cambio social.
+        </p>
+    </section>
+
+    <!--Carousel agregado-->
+    <section>
+        <div class="outer">
+            <div class="inner">
+                <div class="bg card-content">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="./public/img/Organizaciones/TechoPeru/señores-techoperu.jpeg" alt=/>
+                                
+                            </div>
+
+                            <div class=" swiper-slide">
+                                <img src="./public/img/Organizaciones/TechoPeru/techo peru new.jpg" alt="" />
+                                
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="./public/img/Organizaciones/TechoPeru/techo peru new1.png" alt="" />
+                                
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="./public/img/Organizaciones/TechoPeru/techo peru new2.jpg" alt="" />
+                                
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="./public/img/Organizaciones/TechoPeru/techo peru new3.jpg" alt="" />
+                              
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="./public/img/Organizaciones/TechoPeru/techo.jpg" alt="" />
+                                
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="./public/img/Organizaciones/TechoPeru/techoperu1.jpg" alt="" />
+                               
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="./public/img/Organizaciones/TechoPeru/techoperu4.jpg" alt="" />
+                                
+                            </div>
+
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Carrusel jusa-->
+    <section class="organizacion-dos">
+        <div class="title-container">
+            <img src="./public/img/Iconos/Organizaciones/logo jusa.png" alt="JUSA" width="200" height="200" class="logoorg">
+            <h1>Hermanas de Santa Ana JUSA</h1>
+        </div>
+            <p class="concept-text">El Grupo Parroquial Juventud Santa Ana (G.P. JUSA) trabaja activamente en la erradicación de la pobreza
+                mediante voluntariado y acción social. Únete a esta comunidad comprometida con la fe y el cambio social,
+                y
+                ayuda a quienes más lo necesitan.</p>
+    </section>
+<!--Carrusel agregado-->
+    <!--Carrusel jusa-->
+    <section>
+        <div class="outer">
+            <div class="inner">
+                <div class="bg content">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="./public/img/Organizaciones/JUSA/ayudaJusa2.jpg"
+                                    alt= / >
+                                
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="./public/img/Organizaciones/JUSA/hospitalJusa.jpg"
+                                    alt="" / >
+                                
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="./public/img/Organizaciones/JUSA/NecesidadJusa.jpg"
+                                    alt="" />
+                                
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="./public/img/Organizaciones/JUSA/hospitalJusa.jpg"
+                                    alt="" />
+                               
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="./public/img/Organizaciones/JUSA/NecesidadJusa.jpg"
+                                    alt=""/>
+                               
+                            </div>
+                           
+                        </div>
+                        <div class="swiper-pagination"></div>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="donations" id="donation">
+        <h1>Donaciones</h1>
+        <div class="donations-container">
+            <div class="donations-items">
+                <img src="./public/img/Iconos/Donaciones/material-escolar.png" alt="material-escolar" width="129">
+                <h2>Útiles Escolares</h2>
+                <p>Puedes colaborar con recursos que contribuyan a la educación </p>
+
+            </div>
+            <div class="donations-items">
+                <img src="./public/img/Iconos/Donaciones/ropas.png" alt="ropas" width="129">
+                <h2>Ropas</h2>
+                <p>Puedes colaborar con donación de ropas en buen estado</p>
+
+            </div>
+            <div class="donations-items">
+                <img src="./public/img/Iconos/Donaciones/alimentos.png" alt="alimentos" width="129">
+                <h2>Alimentos</h2>
+                <p>Puedes colaborar con donación de alimentos nutritivos</p>
+            </div>
+            <div class="donations-buttons">
+                <a href="/public/pages/donaciones.html">
+                    <button class="donation-button primary">Haz click aquí</button>
+                </a>
+            </div>
+        </div>
+
+    </section>
+    <div class="contacto">
+        <h1>¡Contáctanos!</h1>
+    </div>
+    <!-- Pie de página -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="./public/img/Logo/Logo_Blanco.png" alt="BMS Logo" width="170">
+            </div>
+            <div class="social-media">
+                <a href="https://www.facebook.com/tecnologiaVG/?locale=es_LA"><img
+                        src="./public/img/Iconos/Pagina_Principal/Contacto/facebook.png" alt="Facebook" width="30"></a>
+                <a href="https://www.youtube.com/@vallegrande_/featured"><img
+                        src="./public/img/Iconos/Pagina_Principal/Contacto/youtube.png" alt="YouTube" width="30"></a>
+            </div>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <img src="./public/img/Iconos/Pagina_Principal/Contacto/telefono.png" alt="Teléfono" width="20">
+                    <p>(01) 581-2261</p>
+                </div>
+                <div class="contact-item">
+                    <img src="./public/img/Iconos/Pagina_Principal/Contacto/correo_electronico.png" alt="Email"
+                        width="20">
+                    <p><a href="mailto:informes@vallegrande.edu.pe">informes@vallegrande.edu.pe</a></p>
+                </div>
+                <div class="contact-item">
+                    <img src="./public/img/Iconos/Pagina_Principal/Contacto/correo_electronico.png" alt="Email"
+                        width="20">
+                    <p><a
+                            href="mailto:briseyda.arbizu.valladolid@vallegrande.edu.pe">briseyda.arbizu.valladolid@vallegrande.edu.pe</a>
+                    </p>
+                </div>
+                <div class="contact-item">
+                    <img src="./public/img/Iconos/Pagina_Principal/Contacto/correo_electronico.png" alt="Email"
+                        width="20">
+                    <p><a
+                            href="mailto:marilyn.vilcapuma.trujillo@vallegrande.edu.pe">marilyn.vilcapuma.trujillo@vallegrande.edu.pe</a>
+                    </p>
+                </div>
+                <div class="contact-item">
+                    <img src="./public/img/Iconos/Pagina_Principal/Contacto/correo_electronico.png" alt="Email"
+                        width="20">
+                    <p><a
+                            href="mailto:samuel.justiniani.lancho@vallegrande.edu.pe">samuel.justiniani.lancho@vallegrande.edu.pe</a>
+                    </p>
+                </div>
+                <div class="contact-item">
+                    <img src="./public/img/Iconos/Pagina_Principal/Contacto/sitio_web.png" alt="Websites" width="20">
+                    <p><a href="https://www.vallegrande.edu.pe" target="_blank">www.vallegrande.edu.pe</a></p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>©2024 BMS - Todos los derechos reservados</p>
+            </div>
+    </footer>
+    <!--Link SwipperJS script-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="/public/js/dinamic/carouProyec.js"></script>
+    <script src="/public/js/dinamic/2_carousel.js"></script>
+    <script src="./public/js/static/text.js"></script>
+    <script src="./public/js/dinamic/cards.js"></script>
+    <script src="./public/js/dinamic/modal.js"></script>
+    <script src="./public/js/dinamic/sidebar.js"></script>
+    <script src="./public/js/dinamic/menu.js"></script>
+    <script src="/public/js/dinamic/organisaciones.js"></script>
+    <script src="/public/js/static/calendar.js"></script>
+</body>
+
+</html>

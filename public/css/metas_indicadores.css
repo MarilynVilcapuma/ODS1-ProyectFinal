@@ -1,0 +1,368 @@
+/* Estilos Base */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #D7B69E;
+    line-height: 1.6;
+}
+
+/* Navegación Principal */
+.main-nav {
+    background-color: #AC1414;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.main-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.main-nav ul li {
+    margin-right: 20px;
+}
+
+.main-nav ul li:last-child {
+    margin-right: 0;
+}
+
+.main-nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: color 0.3s ease;
+}
+
+.main-nav ul li a:hover {
+    color: #FFD700;
+}
+
+/* Sección de ODS */
+.ods-section {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.ods-section h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.ods-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.ods-line {
+    background-color: #D7B69E;
+    color: #b71c1c;
+    padding: 15px;
+    border-left: 5px solid #b71c1c;
+    text-align: center;
+    margin: 20px 0;
+    border-radius: 5px;
+}
+
+.ods-line p {
+    margin: 0;
+    font-weight: bold;
+}
+
+/* Secciones Laterales */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.left-section {
+    flex: 2;
+    padding-right: 40px;
+}
+
+.right-section {
+    flex: 1;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.right-section h3 {
+    margin-top: 0;
+}
+
+/* Botones de Metas */
+.goals {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.goal-box {
+    background-color: #b71c1c;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    margin: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    flex: 1 1 150px;
+}
+
+.goal-box:hover {
+    background-color: #9a1919;
+    transform: scale(1.05);
+}
+
+.goal-box.active {
+    background-color: #FFD700;
+    color: black;
+}
+
+/* Meta e Indicadores */
+.meta,
+.indicators {
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid black;
+}
+
+.meta p,
+.indicators p {
+    margin: 0;
+}
+
+/* Subtítulo */
+.subtitle-section {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.subtitle-line {
+    width: 100%;
+    height: 80px;
+    background-color: #c77575;
+    position: relative;
+    margin: 20px 0;
+}
+
+.subtitle-text {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5rem;
+    color: white;
+    background-color: #b71c1c;
+    padding: 10px;
+    font-weight: bold;
+}
+
+/* Sección de Imágenes */
+.images-section {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.images-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.images-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.image-item {
+    flex: 1 1 22%;
+    margin: 10px; /* Espacio entre las imágenes */
+    text-align: center;
+}
+
+.image-item img {
+    width: 100%;
+    height: 200px; /* Define la altura que deseas para todas las imágenes */
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+.image-subtitle {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #b71c1c;
+}
+
+.image-description {
+    margin-top: 5px;
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Sección de Noticias */
+.news-section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.news-grid {
+    display: flex;
+    flex-wrap: wrap; /* Permitir que los elementos se envuelvan en varias filas */
+    justify-content: center; /* Centrar los elementos horizontalmente */
+    gap: 20px; /* Espacio entre cada noticia */
+}
+
+.news-item {
+    width: calc(50% - 20px); /* Ajustar el ancho para que se acomoden dos por fila */
+    max-width: 700px; /* Ancho máximo */
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.news-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    max-height: 300px; /* Mantener la altura máxima de la imagen */
+    object-fit: cover;
+}
+
+/* Media Query para pantallas pequeñas */
+@media (max-width: 768px) {
+    .news-item {
+        width: 100%; /* Ancho completo en pantallas pequeñas */
+    }
+}
+
+
+
+.news-item h3 {
+    margin: 15px 0 10px;
+    font-size: 1.4rem;
+    color: #333;
+}
+
+.news-item p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Portada - Fin de la Pobreza */
+.portada {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #b71c1c;
+    color: white;
+    height: 100vh;
+    text-align: center;
+    padding: 20px;
+}
+
+.portada h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.portada p {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    max-width: 800px;
+}
+
+/* Media Queries para Pantallas Pequeñas */
+@media only screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .left-section,
+    .right-section {
+        width: 100%;
+        padding: 0;
+    }
+
+    .goal-box {
+        margin-bottom: 10px;
+        flex: 1 1 100%;
+    }
+
+    .news-item h3 {
+        font-size: 1.2rem;
+    }
+
+    .news-item p {
+        font-size: 0.9rem;
+    }
+
+    .image-item {
+        flex: 1 1 45%;
+    }
+
+    .portada h1 {
+        font-size: 2rem;
+    }
+
+    .portada p {
+        font-size: 1rem;
+    }
+
+    .ods-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ods-icon {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .ods-line {
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .goal-box {
+        flex: 1 1 100%;
+    }
+
+    .subtitle-text {
+        font-size: 1.2rem;
+    }
+
+    .image-item {
+        flex: 1 1 100%;
+    }
+
+    .portada h1 {
+        font-size: 1.8rem;
+    }
+
+    .portada p {
+        font-size: 1rem;
+        max-width: 100%;
+    }
+}

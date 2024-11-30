@@ -1,0 +1,387 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+}
+
+body{
+    background: RGBA(251, 242, 232, 255);
+}
+
+
+.hero {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(12, 3, 51, 0.3), rgba(12, 3, 51, 0.3)), url(https://img.freepik.com/fotos-premium/nino-sonriente-caja-donaciones_1030879-94480.jpg?w=740);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    text-align: center;
+}
+
+.content h1 {
+    font-size: 50px;
+    color: #fff
+}
+
+/* Diseño del formulario*/
+
+.container-form {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15%;
+    margin-top: 50px;
+}
+
+label{
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-clr);
+  margin-bottom: 8px;
+}
+
+.container-form h2 {
+    margin-bottom: 15px;
+    font-size: 35px;
+}
+
+.container-form p {
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+
+.container-form a {
+    display: inline-block;
+    text-decoration: none;
+    width: 100%;
+    margin-bottom: 15px;
+    color: black;
+    font-weight: 700;
+}
+
+/*Diseño de formulario */
+
+
+:root {
+    --text-clr: black;
+    --error-clr: #b02546;
+    --success-clr: #2ecc71;
+}
+
+section {
+  background: white;
+  max-width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+section .title{
+  background: rgb(255, 192, 203);
+  padding: 20px;
+}
+
+h1 {
+    color: var(--text-clr);
+    text-align: center;
+    padding: 20px 40px 0;
+}
+
+/* FORM  */
+
+form {
+  padding: 30px 40px;
+    font-family: "Poppins", serif;
+
+}
+
+select {
+    display: inline-block;
+    color: var(--text-clr);
+    margin-bottom: 8px;
+    font-size: 16px;
+    width: 100%;
+    outline: 1px solid rgb(255, 192, 203);
+    border-radius: 3px;
+    border: 0;
+    padding: 15px 10px;
+    margin-bottom: 5px;
+    transition: all 0.2s;
+    text-align: center;
+}
+
+select:focus {
+    outline: 3px dotted var(--text-clr);
+}
+
+option {
+    background-color: #fff;
+    color: var(--text-clr);
+    padding: 8px;
+    font-size: 16px;
+}
+
+textarea {
+    color: var(--text-clr);
+    width: 100%;
+    font-size: 16px;
+    outline: 1px solid rgb(255, 192, 203);
+    border-radius: 3px;
+    border: 0;
+    padding: 10px;
+    margin-bottom: 5px;
+    transition: all 0.2s;
+    text-align: center;
+}
+
+textarea:focus {
+    outline: 3px dotted var(--text-clr);
+}
+
+input {
+    width: 100%;
+    background: transparent;
+    color: black;
+    font-size: 16px;
+    font-weight: 500;
+    outline: 1px solid rgb(255, 192, 203);
+    border-radius: 3px;
+    border: 0;
+    padding: 15px 10px;
+    margin-bottom: 5px;
+    transition: all 0.2s;
+}
+
+input:focus {
+    outline: 3px dotted var(--text-clr);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: var(--text-clr);
+}
+
+.input-control.success input {
+    outline: 3px dotted var(--success-clr);
+}
+
+.input-control.error input {
+    outline: 3px dotted var(--error-clr);
+}
+
+.input-control {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-control i {
+    position: absolute;
+    margin-top: 15px;
+    right: 10px;
+    visibility: hidden;
+}
+
+.input-control.success i.fa-check-circle {
+    color: var(--success-clr);
+    visibility: visible;
+}
+
+.input-control.error i.fa-exclamation-circle {
+    color: var(--error-clr);
+    visibility: visible;
+}
+
+.input-control small {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-weight: 800;
+    visibility: hidden;
+}
+
+.input-control.error small {
+    color: var(--error-clr);
+    visibility: visible;
+}
+
+button {
+    width: 100%;
+    background: #b586b9;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 16px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+    transition: all 0.4s linear;
+}
+
+button:hover {
+    background: #68496b;
+}
+
+/* SHOW MESSAGE AFTER SUBMITTING  */
+
+.message h1 {
+    color: rgb(0, 81, 255);
+    text-align: center;
+    text-transform: uppercase;
+    padding: 50px 30px;
+    animation: fade-in 1.5s ease-in-out forwards alternate;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes fade-in {
+    from {
+        transform: rotate(0deg) scale(0) skew(0deg) translateY(30px);
+    }
+
+    to {
+        transform: rotate(0deg) scale(1) skew(0deg) translateY(0);
+    }
+}
+
+/*Diseño de carruseles efecto cubo*/
+.swiper {
+    position: relative;
+    width: 400px;
+    height: 350px;
+  }
+  
+  .swiper-slide {
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    user-select: none;
+    border-radius: 20px;
+  }
+  
+  .cost {
+    position: absolute;
+    top: 8px;
+    right: 6px;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+    padding: 6px 10px;
+    color: #fff;
+    font-size: clamp(0.8rem, 4vw, 0.9rem);
+    font-weight: 600;
+  }
+  
+  .dark-text {
+    color: #202134;
+  }
+  
+  .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+  }
+  
+  .overlay {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 110px;
+    padding: 5px 10px;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    color: #fff;
+    border-radius: 0 0 20px 20px;
+    
+  }
+  
+  .overlay h1 {
+    font-size: clamp(1.2rem, 4vw, 1.5rem);
+    font-weight: 600;
+    color: #fff;
+  }
+
+  .ratings span {
+    font-size: clamp(0.8rem, 4vw, 0.9rem);
+    font-weight: 300;
+  }
+  
+  
+  @media (max-width: 1050px) {
+    .swiper {
+      width: 350px;
+      height: 450px;
+    }
+  }
+  
+  @media (max-width: 930px) {
+    .container-form{
+      grid-template-columns: 100%;
+      grid-template-rows: 50% 45%;
+      grid-template-areas:
+        "slider"
+        "content";
+      place-items: center;
+      gap: 64px;
+      padding: 60px;
+    }
+  
+    .swiper {
+      grid-area: slider;
+    }
+  
+    .content {
+      grid-area: content;
+      text-align: center;
+    }
+  
+    .content h1 {
+      margin-bottom: 20px;
+    }
+
+    .container-form{
+      padding: 40px 40px 60px;
+    }
+  }
+  
+  @media (max-width: 470px) {
+    .container-form{
+      padding: 40px 40px 60px;
+    }
+  
+    .swiper {
+      width: 300px;
+      height: 400px;
+    }
+  } 

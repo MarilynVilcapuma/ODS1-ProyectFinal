@@ -1,0 +1,773 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-style: unset;
+    background-color: #EEECE2;
+}
+/* Contenedor principal */
+.primary-section {
+    text-align: center; /* Cambiado a 'center' para una mejor alineación inicial */
+    margin: 50px;
+}
+
+/* Título de la sección */
+.ods-subtitle h1 {
+    font-size: 50px;
+    margin-bottom: 50px;
+    color: #731111;
+}
+
+/* Contenedor de texto */
+.ods-text {
+    display: inline-block;
+    text-align: justify;
+    background-color: white;
+    padding: 15px 40px;
+    border-radius: 10px;
+    margin: 20px auto; /* Centra el texto horizontalmente */
+    max-width: 900px; /* Limita el ancho del texto */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+/* Texto dentro del contenedor */
+.ods-text p {
+    font-size: 1.5rem; /* Aumenta el tamaño del texto */
+    line-height: 1.6; /* Mejora la legibilidad */
+}
+
+/* Contenedor de la imagen */
+.image-container {
+    display: flex;
+    justify-content: center; /* Centra la imagen */
+    align-items: center;
+    padding: 20px;
+    margin: 20px auto; /* Centra la imagen horizontalmente */
+}
+
+/* Imagen */
+.ods-image {
+    max-width: 100%; /* Asegura que la imagen no exceda su contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin: 0 auto;
+}
+
+
+/* Responsive: Pantallas medianas */
+@media screen and (max-width: 850px) {
+    .ods-subtitle h1 {
+        font-size: 1.9rem; /* Reduce el tamaño del título */
+        text-align: center;
+    }
+
+    .ods-text {
+        padding: 10px 20px; /* Reduce el padding */
+        margin: 20px auto;
+        max-width: 90%; /* Ajusta el ancho del contenedor */
+    }
+
+    .ods-text p {
+        font-size: 1.2rem; /* Reduce el tamaño del texto */
+    }
+
+    .image-container {
+        margin-top: 20px; /* Ajusta el espacio superior */
+    }
+
+    .ods-image {
+        max-width: 80%; /* Ajusta el ancho relativo */
+        margin: 20px auto; /* Centra la imagen */
+    }
+
+}
+
+/* Responsive: Pantallas pequeñas */
+@media screen and (max-width: 480px) {
+    .ods-subtitle h1 {
+        font-size: 1.5rem; /* Reduce aún más el tamaño del título */
+        margin-bottom: 20px;
+    }
+
+    .ods-text {
+        font-size: 0.9rem; /* Reduce el tamaño del texto */
+        padding: 10px;
+        line-height: 1.4;
+    }
+
+    .ods-image {
+        width: 100%; /* La imagen ocupa todo el ancho */
+        max-width: 250px; /* Tamaño máximo de la imagen */
+    }
+
+}
+
+.banner-ods{
+    width: 100%; /* Asegura que el contenedor ocupe el 100% del ancho */
+    overflow: hidden; /* Oculta cualquier contenido que se salga del contenedor */
+}
+.ods-banner{
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    display: block; /* Elimina el espacio debajo de la imagen */
+}
+/* Estilo general de la sección de íconos */
+.icons-section {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los íconos se envuelvan en filas */
+    justify-content: center; /* Centra los íconos horizontalmente */
+    gap: 20px; /* Espaciado uniforme entre íconos */
+    margin: 50px auto; /* Margen superior e inferior */
+    padding: 0 10px; /* Espaciado lateral */
+}
+
+/* Estilo de cada cartilla */
+.icon-card {
+    flex: 1 1 calc(16.66% - 20px); /* Ancho dinámico para 6 íconos por fila */
+    max-width: 214px; /* Ancho máximo de las cartillas */
+    aspect-ratio: 1; /* Proporción 1:1 (cuadrado) */
+    margin: 10px; /* Espaciado entre íconos */
+    position: relative;
+    height: auto; /* Altura proporcional */
+    perspective: 1000px; /* Añade perspectiva para efecto 3D */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+}
+
+/* Parte frontal y trasera de las cartillas */
+.icon-front, .icon-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Oculta la parte trasera */
+    transition: transform 0.6s ease; /* Transición suave al girar */
+    display: flex; /* Centra el contenido */
+    align-items: center; /* Alineación vertical */
+    justify-content: center; /* Alineación horizontal */
+    font-size: 1rem; /* Tamaño base de texto */
+    text-align: center; /* Centra el texto */
+}
+
+/* Estilo de la parte frontal */
+.icon-front {
+    background-color: #EEECE2; /* Color de fondo frontal */
+    border: 1px solid #ccc; /* Borde ligero */
+    border-radius: 10px; /* Esquinas redondeadas */
+}
+
+/* Estilo de la parte trasera */
+.icon-back {
+    background-color: #ffffff; /* Color de fondo trasero */
+    border: 1px solid #ccc; /* Borde ligero */
+    border-radius: 10px; /* Esquinas redondeadas */
+    transform: rotateY(180deg); /* Inicialmente girado */
+}
+
+.icon-back p {
+    margin: 15px;
+    text-align: justify;
+    font-size: 0.9rem; /* Tamaño más pequeño para descripciones */
+    line-height: 1.4; /* Mejora la legibilidad */
+}
+
+/* Efecto de rotación */
+.icon-card:hover .icon-front {
+    transform: rotateY(180deg);
+}
+
+.icon-card:hover .icon-back {
+    transform: rotateY(0);
+}
+
+/* Media Queries para diseño responsivo */
+@media (max-width: 1024px) {
+    .icon-card {
+        flex: 1 1 calc(25% - 20px); /* 4 íconos por fila */
+    }
+}
+
+@media (max-width: 768px) {
+    .icon-card {
+        flex: 1 1 calc(33.33% - 20px); /* 3 íconos por fila */
+    }
+}
+
+@media (max-width: 480px) {
+    .icon-card {
+        flex: 1 1 calc(50% - 20px); /* 2 íconos por fila */
+    }
+}
+
+@media (max-width: 320px) {
+    .icon-card {
+        flex: 1 1 100%; /* 1 ícono por fila */
+    }
+}
+
+/* Estilos del modal */
+.modal {
+    display: none; /* Oculta el modal por defecto */
+    position: fixed; /* Fijo en la pantalla */
+    z-index: 1; /* Muestra por encima de otros elementos */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Alto completo */
+    overflow: auto; /* Habilita el desplazamiento si es necesario */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro y semi-transparente */
+}
+
+.modal-content {
+    background-color: #fefefe; /* Color de fondo del contenido del modal */
+    margin: 15% auto; /* Márgenes para centrar el contenido */
+    padding: 20px; /* Espaciado interno */
+    border: 1px solid #888; /* Borde del modal */
+    width: 80%; /* Ancho del modal */
+}
+#close-sidebar {
+    color: #ffffff; /* Color del botón de cerrar */
+    float: right; /* Alinear a la derecha */
+    font-size: 28px; /* Tamaño del texto */
+    font-weight: bold; /* Negrita */
+}
+#close-sidebar:hover {
+    color: #e2be50; /* Color del botón de cerrar */
+    text-decoration: none; /* Sin subrayado */
+    cursor: pointer; /* Cambia el cursor al pasar */
+}
+.close-modalButton {
+    color: #aaa; /* Color del botón de cerrar */
+    float: right; /* Alinear a la derecha */
+    font-size: 28px; /* Tamaño del texto */
+    font-weight: bold; /* Negrita */
+}
+
+.close-modalButton:hover,
+.close-modalButton:focus {
+    color: black; /* Cambia color al pasar el ratón */
+    text-decoration: none; /* Sin subrayado */
+    cursor: pointer; /* Cambia el cursor al pasar */
+}
+.ods-card img {
+    position: relative;
+    width: 216px; /* Ancho de cada cartilla */
+    height: 171.53px; /* Alto de cada cartilla */
+    margin: 10px; /* Espaciado entre las cartillas */
+    perspective: 1000px; /* Añade perspectiva para el efecto 3D */
+    margin-top: 32px; /* Ajusta el espacio en la parte superior */
+    margin-bottom: 10px; /* Ajusta el espacio en la parte inferior */
+}
+
+/* Aseguramos que el contenedor del botón está debajo de los iconos */
+.icons-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 100%; /* Oculto inicialmente */
+    width: 100%;
+    height: 100%;
+    background: url("/public/img/Pagina_Inicio/historiaODS.jpg");
+    background-size: cover;
+    background-color: white;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.sidebar::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+#content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    margin: 200px;
+    font-family: 'Segoe UI';
+    font-size: 1.5rem;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+}
+/* Responsivo para tablets y móviles */
+@media (max-width: 1024px) {
+    #content h1 {
+        font-size: 1.75rem; /* Reducir el tamaño del título */
+    }
+    #content p {
+        font-size: 0.95rem; /* Reducir ligeramente el texto */
+    }
+}
+
+@media (max-width: 768px) {
+    #content h1 {
+        font-size: 1.5rem; /* Ajuste adicional para tablets pequeñas */
+    }
+    #content p {
+        font-size: 0.9rem; /* Texto más pequeño */
+    }
+}
+
+/* Responsivo para móviles */
+@media (max-width: 425px) {
+    .sidebar {
+        width: 100%; /* Ocupa todo el ancho en móviles */
+        padding: 10px;
+    }
+
+    #content {
+        padding: 10px;
+        text-align: center; /* Alinea el contenido en el centro */
+    }
+
+    #content h1 {
+        font-size: 1.3rem; /* Título más pequeño */
+        margin-bottom: 10px;
+    }
+
+    #content p {
+        font-size: 0.85rem; /* Texto más pequeño */
+        line-height: 1.4; /* Espaciado más ajustado */
+        text-align: justify; /* Mantiene la alineación justificada */
+    }
+
+    .close-button {
+        padding: 8px 12px;
+        font-size: 0.9rem; /* Botón más pequeño */
+    }
+}
+/* Estilo general para la sección */
+.info-section {
+    padding: 20px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+
+/* Estilo para el concepto */
+.concepto {
+    font-size: 1rem;
+    color: #000000;
+    margin-bottom: 20px;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -70px;
+    margin-bottom: 50px;
+}
+
+/* Contenedor del video */
+.video-container {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+/* Estilo para el iframe (video) */
+.video {
+    width: 100%;
+    max-width: 800px;
+    height: 450px;
+    border-radius: 10px;
+}
+
+/* Media Queries */
+
+/* Pantallas móviles */
+@media screen and (max-width: 600px) {
+    .concepto {
+        font-size: 0.9rem;
+    }
+
+    .video {
+        width: 100%;
+        height: 220px; /* Menor altura en pantallas pequeñas */
+    }
+}
+
+/* Pantallas de tabletas */
+@media screen and (max-width: 768px) {
+
+    .concepto {
+        font-size: 1rem;
+    }
+
+    .video {
+        width: 100%;
+        height: 300px;
+    }
+}
+
+/* Pantallas de laptops */
+@media screen and (max-width: 1024px) {
+
+    .concepto {
+        font-size: 1.1rem;
+    }
+
+    .video {
+        width: 90%;
+        height: 400px;
+    }
+}
+
+/* Pantallas de escritorio */
+@media screen and (min-width: 1025px) {
+
+    .concepto {
+        font-size: 1.2rem;
+    }
+
+    .video {
+        width: 80%;
+        height: 450px;
+    }
+}
+
+/* Sección principal */
+.explore-ods {
+    text-align: center;
+    margin: 100px auto; /* Espaciado superior e inferior */
+    padding: 20px;
+    border-radius: 20px; /* Bordes redondeados para toda la sección */
+}
+
+/* Título */
+.explore-ods h1 {
+    font-size: 3rem;
+    color: #a11c1c;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave para el texto */
+}
+
+/* Contenedor de íconos */
+.container-ods {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px; /* Más espacio entre los cuadros */
+    margin: 20px 0;
+}
+
+/* Íconos individuales */
+.icon-position {
+    text-align: center;
+    background: white;
+    border-radius: 20px;
+    padding: 40px 20px;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease;
+}
+
+/* Íconos individuales: Hover */
+.icon-position:hover {
+    transform: translateY(-10px) scale(1.1); /* Eleva y agranda ligeramente */
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+    background: linear-gradient(180deg, #eeece2, #ffc4bd); /* Degradado en hover */
+    border: none;
+}
+
+/* Estilo de las imágenes */
+.icon-position img {
+    max-width: 70%;
+    height: auto;
+    margin-bottom: 15px;
+    transition: transform 0.4s ease; /* Animación suave para la imagen */
+}
+
+/* Imágenes en hover */
+.icon-position:hover img {
+    transform: rotate(10deg) scale(1.1); /* Gira y agranda ligeramente */
+}
+
+/* Enlace y texto */
+.icon-position a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: 'Arial', sans-serif;
+    transition: color 0.3s ease;
+}
+
+/* Hover en texto */
+.icon-position a:hover {
+    color: #731111;
+}
+
+@media screen and (max-width: 850px) {
+    .explore-ods h1 {
+        font-size: 2rem; /* Tamaño más pequeño para pantallas medianas */
+    }
+
+    .container-ods {
+        flex-direction: column; /* Cambia la disposición a columna en pantallas pequeñas */
+        align-items: center; /* Centra los elementos en columna */
+        gap: 15px; /* Espacio entre los iconos */
+    }
+
+    .icon-position {
+        padding: 60px 40px; /* Menos padding en pantallas pequeñas */
+        width: 250px; /* Reducimos el tamaño de los íconos */
+        height: 250px;
+    }
+
+    .icon-position img {
+        max-width: 70%; /* Ajustamos las imágenes */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .explore-ods {
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+
+    .explore-ods h1 {
+        font-size: 1.8rem;
+    }
+
+    .container-ods {
+        gap: 10px; /* Espacio aún más pequeño */
+    }
+
+    .icon-position {
+        padding: 80px 30px; /* Ajusta aún más el padding */
+        width: 200px; /* Iconos más pequeños */
+        height: 20px;
+    }
+
+    .icon-position img {
+        max-width: 60%; /* Imágenes aún más pequeñas */
+    }
+}
+
+.projects {
+    display: flex;
+    background-color: #ffffff;
+    padding: 50px;
+}
+
+/* Título principal de la sección Organizaciones */
+.subtitle{
+    width: 100%; /* Ocupar todo el ancho */
+    background-color: #ffeed8; /* Marrón crema */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    min-height: 15vh; /* Altura mínima de la sección */
+    text-align: center;
+}
+
+.subtitle h1 {
+    font-size: 2rem;
+    color: #731111; /* Color del texto */
+    margin: 0;
+}
+/* Estilos para la sección con logo */
+.organization {
+    width: 100%; /* Asegura que cubra todo el ancho de la pantalla */
+    min-height: 30vh; /* Asegura que cubra la altura visible de la pantalla */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #2b8fd0;
+    padding: 20px;
+    color: #ffffff; /* Texto en blanco para contraste */
+}
+
+/* Contenedor del título */
+.title-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+/* Estilo del logo */
+.logoorg {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%; /* Redondear bordes del logo */
+}
+
+/* Estilo del título */
+.title-container h1 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+/* Estilo del texto del concepto */
+.concept-text {
+    font-size: 1rem;
+    text-align: center;
+    line-height: 1.6;
+    max-width: 800px;
+    margin-bottom: 50px;
+}
+
+/* Diseño responsivo */
+@media (max-width: 768px) {
+    .title-container h1 {
+        font-size: 1.25rem;
+    }
+    .logo {
+        width: 40px;
+        height: 40px;
+    }
+    .concept-text {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .title-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .logo {
+        margin-bottom: 10px;
+    }
+    .title-container h1 {
+        font-size: 1rem;
+    }
+    .concept-text {
+        font-size: 0.85rem;
+    }
+}
+
+
+.organizacion-dos {
+    background-color: rgb(255, 228, 228);
+    width: 100%; /* Asegura que cubra todo el ancho de la pantalla */
+    min-height: 30vh; /* Asegura que cubra la altura visible de la pantalla */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.donations {
+    background-color: #6B1414;
+    color: white;
+    padding-top: 50px;
+    padding-bottom: 190px;
+    position: relative; /* Agregado para permitir el posicionamiento absoluto de los botones */
+    margin-bottom: 20px;
+}
+
+.donations h1 {
+    margin: 50px;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.donations-container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+@media screen and (max-width: 480px) {
+    .donations-container {
+        display: grid;
+    }
+}
+.donations-items {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Contenedor de botones */
+.donations-buttons {
+    display: flex;                   /* Alinea los botones en fila */
+    justify-content: center;         /* Centra los botones horizontalmente */
+    position: absolute;              /* Permite posicionar los botones en la parte inferior */
+    transform: translate(-50%, -50%);
+    bottom: 20px;                    /* Coloca los botones a 20px del fondo de la sección */
+    left: 50%;                       /* Mueve el contenedor al centro horizontalmente */
+    width: 100%;                     /* Asegura que el contenedor ocupe todo el ancho */
+    padding-bottom: 50px;            /* Espaciado adicional */
+}
+
+/* Botón primario */
+.donation-button.primary {
+    background: linear-gradient(45deg, #ff7ba9, #ff4d6d); /* Degradado de colores */
+    color: white;                       /* Color del texto */
+    border: none;                       /* Sin bordes */
+    padding: 12px 30px;                 /* Tamaño del botón */
+    font-size: 18px;                    /* Tamaño de fuente más grande */
+    font-weight: bold;                  /* Negrita */
+    text-transform: uppercase;          /* Texto en mayúsculas */
+    cursor: pointer;                    /* Manito al pasar */
+    border-radius: 30px;                /* Bordes redondeados */
+    transition: all 0.4s ease;          /* Transición suave */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra elegante */
+    position: relative;                 /* Para efectos adicionales */
+    overflow: hidden;                   /* Esconde contenido que salga del botón */
+}
+
+/* Efecto hover para el botón primario */
+.donation-button.primary:hover {
+    background: linear-gradient(45deg, #ff4d6d, #ff7ba9); /* Cambia la dirección del degradado */
+    transform: scale(1.05);            /* Agranda ligeramente el botón */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Aumenta la sombra */
+}
+
+/* Efecto visual en el fondo al pasar el mouse */
+.donation-button.primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 300%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: skewX(-45deg);
+    transition: all 0.4s ease;
+    z-index: 1;                        /* Asegura que esté detrás del texto */
+}
+
+/* Movimiento del brillo al pasar el mouse */
+.donation-button.primary:hover::before {
+    left: 100%;
+}
+
+/* Asegura que el texto esté siempre encima */
+.donation-button.primary {
+    z-index: 2;
+}
+
